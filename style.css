@@ -1,0 +1,222 @@
+/* --------------------------- */
+/*   STILE GENERALE DEL SITO   */
+/* --------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --------------------------- */
+/*          HEADER             */
+/* --------------------------- */
+
+header {
+  background-color: #0056b3; /* blu principale */
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+header img {
+  height: 45px;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* --------------------------- */
+/*         HERO SECTION        */
+/* --------------------------- */
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 10%;
+  background-color: #ffffff;
+  border-bottom: 2px solid #e6e6e6;
+  gap: 60px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 320px;
+  max-width: 550px;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #222;
+  font-weight: 700;
+}
+
+.hero-text .lead {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* immagine a destra */
+.hero img {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --------------------------- */
+/*    SEZIONE SPIEGAZIONE      */
+/* --------------------------- */
+
+.section-info {
+  padding: 70px 10%;
+  background-color: #f7f9fc;
+  text-align: left;
+}
+
+.section-info h3 {
+  font-size: 1.6rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.section-info p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 900px;
+}
+
+/* --------------------------- */
+/*         FORM SECTION        */
+/* --------------------------- */
+
+.hidden {
+  display: none;
+}
+
+#form-section {
+  background-color: #ffffff;
+  margin: 60px auto;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+}
+
+form label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+form select,
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* --------------------------- */
+/*          FOOTER             */
+/* --------------------------- */
+
+footer {
+  background-color: #0056b3;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+  margin-top: 80px;
+  font-size: 0.95rem;
+}
+
+/* --------------------------- */
+/*        RESPONSIVE           */
+/* --------------------------- */
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero img {
+    max-width: 100%;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+}
+/* --- Dropdown province con ricerca --- */
+.province-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.province-search {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.province-wrapper select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-height: 160px;
+  overflow-y: auto;
+}
