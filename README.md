@@ -1,9 +1,9 @@
 # 🚗 Calcolo Passaggio di Proprietà
 
 Applicazione web sviluppata in **PHP**, **HTML**, **CSS** e **JavaScript** che permette di calcolare il costo del passaggio di proprietà per:
-- Auto
-- Moto
-- Autocarri
+- Auto  
+- Moto  
+- Autocarri  
 
 Il calcolo include:
 - IPT (Imposta Provinciale di Trascrizione)
@@ -26,20 +26,20 @@ calcolopassaggio/
 │── script.js → Logica lato client e validazioni
 │── .gitignore → Protezione dati sensibili
 
+---
+
 ## 🗄️ Database MySQL
 
 Il progetto utilizza un database MySQL locale (XAMPP).  
 Il file `db.php` contiene le credenziali **solo per uso in locale**:
 
-host: 127.0.0.1
-utente: root
-password: (vuota per XAMPP)
-database: calcolo_preventivi
+- **host:** 127.0.0.1  
+- **utente:** root  
+- **password:** *(vuota per XAMPP)*  
+- **database:** calcolo_preventivi  
 
-sql
-Copia codice
-
-### Struttura tabella `preventivi`
+---
+### 📌 Struttura tabella `preventivi`
 
 ```sql
 CREATE TABLE preventivi (
@@ -53,62 +53,35 @@ CREATE TABLE preventivi (
     totale DECIMAL(10,2),
     data_creazione TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
+```
 ## ▶️ Come usare il progetto
-
 1. Copia il progetto nella cartella:
-
-   C:\xampp\htdocs\progetti\calcolopassaggio
+C:\xampp\htdocs\progetti\calcolopassaggio
 
 2. Avvia Apache e MySQL da XAMPP.
-3. Crea il database `calcolo_preventivi` e importa la tabella `preventivi`come sopra indicato
+
+3. Crea il database `calcolo_preventivi` e importa la tabella `preventivi` come indicato sopra.
 
 4. Apri il progetto nel browser:
-
-   http://localhost/progetti/calcolopassaggio
-
+http://localhost/progetti/calcolopassaggio
 5. Compila il form per ottenere un preventivo.
 
-6. Lo storico dei preventivi è disponibile qui:
+6. Visualizza lo storico dei preventivi qui:
+http://localhost/progetti/calcolopassaggio/storico.php
+---
 
-   http://localhost/progetti/calcolopassaggio/storico.php
 
-## ✨ Funzionalità principali
+## 🛠️ Tecnologie utilizzate
 
-Calcolo automatico IPT in base a:
+- PHP 8  
+- HTML5  
+- CSS3  
+- JavaScript  
+- MySQL + PDO  
+- XAMPP  
 
-kW
+---
 
-provincia
+## 👩‍💻 Autore
 
-categoria del veicolo
-
-ultratrentennalità
-
-maggiorazioni specifiche
-
-Validazioni lato client e lato server
-
-Stampa del preventivo
-
-Salvataggio su database
-
-Storico con tabella ordinata per data
-
-##🛠️ Tecnologie utilizzate
-
-PHP 8
-
-HTML5
-
-CSS3
-
-JavaScript
-
-MySQL + PDO
-
-XAMPP
-
-##👩‍💻 Autore
-
-Progetto sviluppato da Elena Polese.
+Progetto sviluppato da **Elena Polesel**
