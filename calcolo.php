@@ -104,6 +104,32 @@ else {
 }
 
 $totale = $totale_spese_fisse + $ipt;
+// -----------------------------
+// SALVATAGGIO NEL DATABASE
+// -----------------------------
+try {
+    require_once __DIR__ . '/db.php'; // carica $pdo da db.php
+
+    $sql = "INSERT INTO preventivi (categoria, ultra, provincia, kw, portata, ipt, totale)
+            VALUES (:categoria, :ultra, :provincia, :kw, :portata, :ipt, :totale)";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        ':categoria' => $categoria,
+        ':ultra'     => $ultra ?: null,
+        ':provincia' => $provincia ?: null,
+        ':kw'        => $kw ?: null,
+        ':portata'   => $portata ?: null,
+        ':ipt'       => $ipt,
+        ':totale'    => $totale
+    ]);
+
+    $lastId = $pdo->lastInsertId();
+} catch (Exception $e) {
+    // Logga l'errore ma non interrompere la visualizzazione
+    error_log("Errore DB: " . $e->getMessage());
+    $lastId = null;
+}
 
 ?>
 
