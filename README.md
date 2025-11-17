@@ -77,7 +77,7 @@ http://localhost/progetti/calcolopassaggio/storico.php
 - HTML5  
 - CSS3  
 - JavaScript  
-- MySQL + PDO  
+- MySQL   
 - XAMPP  
 
 ---
