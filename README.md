@@ -51,7 +51,7 @@ CREATE TABLE preventivi (
     portata VARCHAR(20),
     ipt DECIMAL(10,2),
     totale DECIMAL(10,2),
-    data_creazione TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
 ## ▶️ Come usare il progetto
